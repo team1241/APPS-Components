@@ -16,9 +16,11 @@ const config: StorybookConfig = {
     "@storybook/addon-vitest",
     "@storybook/addon-a11y",
     "@storybook/addon-docs",
+    "@storybook/addon-themes",
     "@storybook/addon-mcp"
   ],
   "framework": "@storybook/react-vite",
+  "staticDirs": [{ from: './public', to: '/' }],
   async viteFinal(config) {
     return mergeConfig(config, {
       resolve: {
@@ -35,6 +37,7 @@ const config: StorybookConfig = {
           'react/jsx-dev-runtime',
           'react-dom',
           'react-dom/client',
+          'storybook/theming',
           'class-variance-authority',
           'clsx',
           'tailwind-merge',
@@ -79,6 +82,7 @@ const config: StorybookConfig = {
           '@base-ui/react/tooltip',
           '@base-ui/react/use-render',
           '@shadcn/react/message-scroller',
+          '@storybook/addon-themes'
         ],
       },
     });
