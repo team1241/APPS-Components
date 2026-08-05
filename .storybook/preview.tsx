@@ -8,6 +8,7 @@ import {
 import { themes } from 'storybook/theming'
 import { TooltipProvider } from '@/components/ui/tooltip'
 import '../src/styles/index.css'
+import './preview.css'
 
 function ThemedDocsContainer({
   children,
